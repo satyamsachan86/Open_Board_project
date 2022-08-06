@@ -1,0 +1,244 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.options-cont{
+    height: 3rem;
+    width: 2.5rem;
+    background-color: #f1f2f6;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.tools-cont{
+    display: flex;
+    justify-content: space-around;
+    height: 5rem;
+    width: 70vw;
+    background-color: #f1f2f6;
+    position: absolute;
+    top: 1.5rem;
+    left: 20vw;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.scale-tools{
+    animation: scale-tools 1s;
+}
+
+@keyframes scale-tools {
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.tools-cont > *{
+    display: block;
+    width: 3.7rem;
+    margin: 2px;
+    padding: 2px;
+}
+
+.tools-cont > *:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+@media screen and (max-width:600px) {
+    .options-cont{
+        height: 2rem;
+        width: 1.5rem;
+        font-size: 1rem;
+    }
+    .tools-cont{
+        height: 3rem;
+    }
+
+    .tools-cont > *{
+        width: 2rem;
+    }
+
+}
+
+.pencil-tool{
+    display: none;
+    height: 4rem;
+    width: 8.5rem;
+    border-radius: 3px;
+    background-color: #f1f2f6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* background-color: lightgreen; */
+    position: absolute;
+    top: 6.5rem;
+    left: 20vw;
+}
+.pencil-width-cont{
+    /* background-color: orange; */
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pencil-width-cont input{
+    width: 80%;
+}
+
+.pencil-color-cont{
+    /* background-color: yellow; */
+    height: calc(100% - 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.pencil-color{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+}
+
+.black{
+    background-color: black;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+
+.eraser-tool{
+    height: 2rem;
+    width: 6rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 6.5rem;
+    left: 31vw;
+    background-color: #f1f2f6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.eraser-tool input{
+    width: 80%;
+}
+
+
+/* sticky container */
+
+.sticky-cont{
+    height: 15rem;
+    width: 13rem;
+    /* background-color: lightblue; */
+    position: absolute;
+    top: 15rem;
+    left: 8rem;
+}
+
+.sticky-cont > .minimize {
+    pointer-events: none;
+}
+
+.header-cont{
+    height: 2rem;
+    background-color: #f1f2f6;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-cont > *{
+    margin-right: .5rem;
+    border-radius: 50%;
+    height: 1.3rem;
+    width: 1.3rem;
+}
+.minimize{
+    background-color: green;
+}
+
+/* .minimize:hover{
+    border: 2px solid black;
+} */
+
+.close{
+    background-color: red;
+}
+
+.notes-cont{
+    background-color: rgba(236, 236, 47, 0.39);
+    height: calc( 100% - 2rem);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.notes-cont textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+
+@media screen and (max-width:600px) {
+    .pencil-tool{
+        height: 2rem;
+        width: 5.5rem;
+        top: 5.5rem;
+        
+    }
+    .pencil-width-cont{
+        height: .8rem;
+    }
+
+    .pencil-color-cont{
+        /* background-color: yellow; */
+        height: calc(100% - 0.8rem);
+    }
+
+    .pencil-color{
+        height: .8rem;
+        width: .8rem;
+        border-radius: 50%;
+    }
+
+    .eraser-tool{
+        height: 1.5rem;
+        width: 4rem;
+        top: 5.5rem;
+    }
+
+    .sticky-cont{
+        height: 12rem;
+        width: 10rem;
+    }
+
+}
